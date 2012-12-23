@@ -18,9 +18,6 @@ Ext.Loader.setConfig({
 });
 
 Ext.application({
-  stores: [
-  'TaskStore',
-  ],
   models: [
   'Project',
   'Task'
@@ -28,10 +25,13 @@ Ext.application({
   views: [
   'MainPanel',
   'ProjectView',
-  'MyTabPanel1',
+  'MyTasksPanel',
   'TaskForm',
   'BacklogForm',
   'MyFormPanel3'
+  ],
+  stores: [
+  'TaskStore'
   ],
   name: 'ScrumApp',
   controllers: [
@@ -40,17 +40,17 @@ Ext.application({
 
   launch: function() {
     Ext.onReady(function(){
-      //navigator.splashscreen.hide();
-      s = Ext.getStore("taskSyncStore");
+      s = Ext.getStore('taskSyncStore');
       s.setSyncRemovedRecords(true); // TODO hacky
       s.loadLocal(function(){
         if(s.getCount() == 0){
-          //s.loadServer();
+          s.loadServer();
         }
       });
+
     });
 
-    Ext.create('ScrumApp.view.MainPanel', {fullscreen: true});
+    Ext.create('ScrumApp.view.MainPanel', { fullscreen: true });
   }
 
 });
