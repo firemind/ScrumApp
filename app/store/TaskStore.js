@@ -5,6 +5,7 @@ Ext.define('ScrumApp.store.TaskStore', {
         storeId: 'taskSyncStore',
         model: 'ScrumApp.model.Task',
         autoServerSync: true,
+        remoteFilter: false,
         syncRemovedRecords: true,
         localProxy: {
             type: 'localstorage',

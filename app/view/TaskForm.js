@@ -51,7 +51,12 @@ Ext.define('ScrumApp.view.TaskForm', {
                     {
                         xtype: 'selectfield',
                         name: 'state',
-                        label: 'State'
+                        label: 'State',
+                        options: [
+                          {text: 'Open',  value: 'open'},
+                          {text: 'In Progress', value: 'in_progress'},
+                          {text: 'Closed',  value: 'closed'}
+                      ]
                     },
                     {
                         xtype: 'textareafield',

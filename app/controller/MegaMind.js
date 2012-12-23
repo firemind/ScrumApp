@@ -60,8 +60,9 @@ Ext.define('ScrumApp.controller.MegaMind', {
     updateTaskRecord: function(record, vals) {
         s = Ext.getStore('taskSyncStore');
         record.set('name', vals.name);
-        Ext.blub= record;
-        console.dir(record.get('name'));
+        record.set('description', vals.description);
+        record.set('estimated_time', vals.estimated_time);
+        record.set('state', vals.state);
         //record.set('comment', vals.comment);
         s.sync();
         history.back();

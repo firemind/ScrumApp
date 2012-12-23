@@ -24,7 +24,7 @@ Ext.define('ScrumApp.view.MyTasksPanel', {
                 iconCls: '',
                 store: 'taskSyncStore',
                 title: 'Open',
-                itemId: 'mylist',
+                itemId: 'openTaskList',
                 itemTpl: [
                     '<div>{name}</div>'
                 ]
@@ -32,29 +32,63 @@ Ext.define('ScrumApp.view.MyTasksPanel', {
             {
                 xtype: 'list',
                 iconCls: '',
+                store: 'taskSyncStore',
                 title: 'In Progress',
+                itemId: 'inProgressTaskList',
                 itemTpl: [
-                    '<div>List Item {string}</div>'
+                    '<div>{name}</div>'
                 ]
             },
             {
                 xtype: 'list',
+                store: 'taskSyncStore',
                 title: 'Completed',
+                itemId: 'closedTaskList',
                 itemTpl: [
-                    '<div>List Item {string}</div>'
+                    '<div>{name}</div>'
                 ]
             }
         ],
         listeners: [
             {
-                fn: 'onMylistItemTap',
+                fn: 'onItemTap',
                 event: 'itemtap',
-                delegate: '#mylist'
+                delegate: '#openTaskList'
+            },
+            {
+                fn: 'onItemTap',
+                event: 'itemtap',
+                delegate: '#inProgressTaskList'
+            },
+            {
+                fn: 'onItemTap',
+                event: 'itemtap',
+                delegate: '#closedTaskList'
+            },
+            {
+              event: 'activate',
+              delegate: '#openTaskList',
+              fn: function(newActiveItem, container, oldActiveItem, eOpt){ var s= Ext.getStore('taskSyncStore'); s.clearFilter();s.filter('state',  'open');}
+            },
+            {
+              event: 'activate',
+              delegate: '#inProgressTaskList',
+              fn: function(newActiveItem, container, oldActiveItem, eOpt){ var s= Ext.getStore('taskSyncStore'); s.clearFilter();s.filter('state',  'in_progress');}
+            },
+            {
+              event: 'activate',
+              delegate: '#closedTaskList',
+              fn: function(newActiveItem, container, oldActiveItem, eOpt){ var s= Ext.getStore('taskSyncStore'); s.clearFilter();s.filter('state',  'closed');}
             }
         ]
     },
 
-    onMylistItemTap: function(dataview, index, target, record, e, options) {
+    onItemTap: function(dataview, index, target, record, e, options) {
+        console.dir(dataview);
+        console.dir(index);
+        console.dir(record);
+        console.dir(e);
+        console.dir(options);
         ScrumApp.app.redirectTo("tasks/"+ record.getId());
     }
 
