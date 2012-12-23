@@ -21,23 +21,21 @@ Ext.define('ScrumApp.view.MainPanel', {
             {
                 xtype: 'tabpanel',
                 title: 'My Tasks',
-                activeItem: 1,
                 iconCls: 'organize',
+                activeItem: 1,
                 items: [
                     {
                         xtype: 'list',
-                        id: 'myTasksOpenList',
-                        iconCls: '',
                         title: 'Open',
-                        store: 'taskSyncStore',
+                        iconCls: '',
                         itemTpl: [
-                            '<div>{name}</div>'
+                            '<div>List Item {string}</div>'
                         ]
                     },
                     {
                         xtype: 'list',
-                        iconCls: '',
                         title: 'In Progress',
+                        iconCls: '',
                         itemTpl: [
                             '<div>List Item {string}</div>'
                         ]
@@ -54,8 +52,8 @@ Ext.define('ScrumApp.view.MainPanel', {
             {
                 xtype: 'tabpanel',
                 title: 'Projects',
-                activeItem: 1,
                 iconCls: 'team',
+                activeItem: 1,
                 items: [
                     {
                         xtype: 'toolbar',
@@ -88,7 +86,7 @@ Ext.define('ScrumApp.view.MainPanel', {
                         itemTpl: [
                             '<div>{name}</div>'
                         ],
-                        store: 'projectStore'
+                        store: 'projectSyncStore'
                     },
                     {
                         xtype: 'list',
