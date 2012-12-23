@@ -1,0 +1,27 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Project"
+        ],
+        "views": [
+            "MainPanel",
+            "ProjectView",
+            "MyTabPanel1",
+            "TaskForm",
+            "BacklogForm",
+            "MyFormPanel3"
+        ],
+        "name": "ScrumApp",
+        "controllers": [
+            "MegaMind"
+        ]
+    },
+    "id": "ExtBox1-ext-gen1813",
+    "designerId": "application"
+}

@@ -1,0 +1,57 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MegaMind"
+    },
+    "id": "ExtBox1-ext-gen43311",
+    "designerId": "6fefac46-c190-4d2a-8881-311a3f05a738",
+    "cn": [
+        {
+            "type": "controllerroute",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "showProject",
+                "fn": "showProject",
+                "designer|params": [
+                    "id"
+                ],
+                "implHandler": [
+                    "view= this.getProjectView();",
+                    "",
+                    "if (view == undefined) {",
+                    "    view = Ext.Viewport.add({",
+                    "        xtype: \"projectview\"",
+                    "    });",
+                    "}",
+                    "",
+                    "Ext.Viewport.setActiveItem(view);"
+                ],
+                "url": "projects/:id"
+            },
+            "designerId": "ea6346b4-7127-4b6b-a8ee-292616ac654e"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "projectView",
+                "ref": "projectView",
+                "selector": "#projectView"
+            },
+            "designerId": "07e76cdb-52f8-44be-bde1-69b5835f0d75"
+        }
+    ]
+}

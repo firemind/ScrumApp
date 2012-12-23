@@ -1,0 +1,100 @@
+{
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyFormPanel3"
+    },
+    "id": "ExtBox1-ext-gen41428",
+    "designerId": "4d36978e-ba09-4bcc-939c-ba5c7898d2a0",
+    "cn": [
+        {
+            "type": "titlebar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTitleBar1",
+                "docked": "top",
+                "title": "Project Name"
+            },
+            "designerId": "a26eb87b-1cdc-4f9c-9cfc-dd74fe8df001",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton6",
+                        "ui": "back",
+                        "text": "Back"
+                    },
+                    "designerId": "2493b3f1-9469-4252-9356-dc3fa1895735"
+                }
+            ]
+        },
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet1",
+                "title": "Project Settings"
+            },
+            "designerId": "16d77491-8d4c-4ebb-991c-69b194c10b54",
+            "cn": [
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextField",
+                        "label": "Name"
+                    },
+                    "designerId": "985b7897-9669-4fd9-b6da-e515426cfe72"
+                },
+                {
+                    "type": "textareafield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextArea",
+                        "label": "Description"
+                    },
+                    "designerId": "01470323-0754-43be-bcb8-d0262fd8b9f4"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton7",
+                        "ui": "confirm",
+                        "text": "Apply"
+                    },
+                    "designerId": "bc60168c-e85c-4e17-ad8e-e99baedf2eff"
+                }
+            ]
+        }
+    ]
+}

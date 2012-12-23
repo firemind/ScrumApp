@@ -1,0 +1,127 @@
+{
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TaskForm"
+    },
+    "id": "ExtBox1-ext-gen33727",
+    "designerId": "9bc13cf2-731e-4713-89bd-b7bf6c819a55",
+    "cn": [
+        {
+            "type": "titlebar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTitleBar1",
+                "docked": "top",
+                "title": "Taskname"
+            },
+            "designerId": "c815ee4e-d12a-4ba7-9488-3405f1c36729",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton6",
+                        "ui": "back",
+                        "text": "Back"
+                    },
+                    "designerId": "834b2337-e48e-4883-a63c-cb2a7733afbe"
+                }
+            ]
+        },
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet1",
+                "title": "Task Settings"
+            },
+            "designerId": "810f5699-0869-43a5-806c-7a13e55c2f5c",
+            "cn": [
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextField",
+                        "label": "Name"
+                    },
+                    "designerId": "1485579b-8107-41fe-a084-307a6945bca5"
+                },
+                {
+                    "type": "spinnerfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySpinnerField",
+                        "label": "Time",
+                        "stepValue": 0.5
+                    },
+                    "designerId": "425bdb41-e5c6-4902-8455-637a1bc70d4e"
+                },
+                {
+                    "type": "selectfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySelectField",
+                        "label": "State"
+                    },
+                    "designerId": "87a4db60-27ed-4c4f-b279-071810d9dc61"
+                },
+                {
+                    "type": "textareafield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextArea",
+                        "label": "Description"
+                    },
+                    "designerId": "93bc4864-260d-491e-93be-427e4670461b"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton7",
+                        "ui": "confirm",
+                        "text": "Apply"
+                    },
+                    "designerId": "5720eb3f-a19d-4e19-bfe3-4b621d364511"
+                }
+            ]
+        }
+    ]
+}

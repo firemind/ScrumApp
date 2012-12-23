@@ -1,0 +1,418 @@
+{
+    "type": "tabpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MainPanel",
+        "designer|initialView": true
+    },
+    "id": "ExtBox1-ext-gen2198",
+    "designerId": "bb3376ff-a54b-422f-b009-04cd9731406e",
+    "cn": [
+        {
+            "type": "tabpanel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "My Tasks",
+                "iconCls": "organize",
+                "activeItem": 1,
+                "designer|userClassName": "MyTabPanel1"
+            },
+            "designerId": "4b593f73-c50e-48b6-94d6-b3edfd9dc5ff",
+            "cn": [
+                {
+                    "type": "list",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Open",
+                        "iconCls": "",
+                        "designer|userClassName": "MyList"
+                    },
+                    "designerId": "5be1523d-c322-49b1-8cea-c06a1b870366",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "iconCls",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "template",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "itemTpl",
+                                "implHandler": [
+                                    "<div>List Item {string}</div>"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "049bbc02-b231-4f6b-9498-9e761322dc6b"
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "In Progress",
+                        "iconCls": "",
+                        "designer|userClassName": "MyList"
+                    },
+                    "designerId": "f0bd04fb-979a-46ff-8dfb-130e37574610",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "iconCls",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "template",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "itemTpl",
+                                "implHandler": [
+                                    "<div>List Item {string}</div>"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "a9352ac2-2540-4b98-842d-200946bad53e"
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Completed",
+                        "designer|userClassName": "MyList"
+                    },
+                    "designerId": "9ea816d5-5149-4ccd-b892-0c66e5101650",
+                    "cn": [
+                        {
+                            "type": "template",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "itemTpl",
+                                "implHandler": [
+                                    "<div>List Item {string}</div>"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "8403cc47-3ba6-486a-8e60-d695999dd5ad"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "tabpanel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Projects",
+                "iconCls": "team",
+                "activeItem": 1,
+                "designer|userClassName": "MyTabPanel3"
+            },
+            "designerId": "48e1dd82-31ef-4496-bd85-5285c0cc811c",
+            "cn": [
+                {
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyToolbar",
+                        "docked": "bottom"
+                    },
+                    "designerId": "d6ce8069-b17c-44e9-8a5e-34e435130a07",
+                    "cn": [
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "designer|userClassName": "MyButton2",
+                                "ui": "action",
+                                "iconAlign": "bottom",
+                                "iconCls": null,
+                                "iconMask": true,
+                                "text": "Add"
+                            },
+                            "designerId": "6bf415ab-28fa-4cda-9991-979bb28e870a"
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "",
+                        "title": "Open",
+                        "designer|userClassName": "MyList"
+                    },
+                    "designerId": "c41694b1-5e10-4513-9c90-dd5432b26fef",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "iconCls",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "template",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "itemTpl",
+                                "implHandler": [
+                                    "<div>List Item {string}</div>"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "fa96734b-481f-4ef6-937d-663ce417f868"
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "",
+                        "title": "In Progress",
+                        "designer|userClassName": "MyList",
+                        "itemId": "mylist4"
+                    },
+                    "designerId": "8f953ae6-cd2d-4058-b9bb-93695c770c7e",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "iconCls",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "template",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "itemTpl",
+                                "implHandler": [
+                                    "<div>List Item {string}</div>"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "82da5e2e-80f9-4f38-ab80-50713b785afa"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMylist4ItemTap",
+                                "fn": "onMylist4ItemTap",
+                                "implHandler": [
+                                    "ScrumApp.app.redirectTo(\"projects/\"+ record.getId());"
+                                ],
+                                "name": "itemtap"
+                            },
+                            "designerId": "bed1cf4c-f148-402b-9f06-3b53b122b1f6"
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Completed",
+                        "designer|userClassName": "MyList"
+                    },
+                    "designerId": "9d4d6899-f9bc-4bbf-88b3-9e0789e1fa32",
+                    "cn": [
+                        {
+                            "type": "template",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "itemTpl",
+                                "implHandler": [
+                                    "<div>List Item {string}</div>"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "03688d4f-cbc6-4957-89a7-9431a7dae7c8"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "formpanel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Settings",
+                "iconCls": "settings",
+                "designer|userClassName": "MyFormPanel"
+            },
+            "designerId": "1d2e80cf-f7cc-4df9-b202-debbd8f40edf",
+            "cn": [
+                {
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyFieldSet",
+                        "title": "GitHub Credentials"
+                    },
+                    "designerId": "eaf79854-7cbc-4d77-b59b-fd9a2645ce02",
+                    "cn": [
+                        {
+                            "type": "emailfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyEmailField",
+                                "label": "E-Mail",
+                                "placeHolder": "email@example.com"
+                            },
+                            "designerId": "a73d7317-a6a9-4214-abfa-8ebde84970df"
+                        },
+                        {
+                            "type": "passwordfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyPasswordField",
+                                "label": "Password"
+                            },
+                            "designerId": "fd42fd77-de82-420d-8af9-3c4d50ab23a4"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton",
+                                "ui": "confirm",
+                                "text": "Apply"
+                            },
+                            "designerId": "a1ee5041-b173-40a7-b4d1-5b5bba715dbb"
+                        }
+                    ]
+                },
+                {
+                    "type": "titlebar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTitleBar4",
+                        "docked": "top",
+                        "title": "Settings"
+                    },
+                    "designerId": "7cf2afaa-4b80-45f2-9711-179b446f38fb"
+                }
+            ]
+        },
+        {
+            "type": "tabbar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTabBar",
+                "docked": "bottom"
+            },
+            "designerId": "9177ceb3-8fab-49dc-89ef-552ec94a7e54"
+        }
+    ]
+}

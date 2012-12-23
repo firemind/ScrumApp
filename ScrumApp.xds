@@ -1,0 +1,112 @@
+{
+    "name": "ScrumApp",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 676,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "touch21",
+    "topInstanceFileMap": {
+        "bb3376ff-a54b-422f-b009-04cd9731406e": {
+            "paths": [
+                "metadata/view/MainPanel",
+                "app/view/override/MainPanel.js",
+                "app/view/MainPanel.js"
+            ],
+            "className": "MainPanel"
+        },
+        "7d00e6bf-c23a-48ff-a6af-d7ffccc3a1f7": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "8e304491-1305-4f08-b108-1f617a6c0a4f": {
+            "paths": [
+                "metadata/view/ProjectView",
+                "app/view/override/ProjectView.js",
+                "app/view/ProjectView.js"
+            ],
+            "className": "ProjectView"
+        },
+        "3eb1b204-6b21-4aea-8159-de4310bd31c1": {
+            "paths": [
+                "metadata/view/MyTabPanel1",
+                "app/view/override/MyTabPanel1.js",
+                "app/view/MyTabPanel1.js"
+            ],
+            "className": "MyTabPanel1"
+        },
+        "9bc13cf2-731e-4713-89bd-b7bf6c819a55": {
+            "paths": [
+                "metadata/view/TaskForm",
+                "app/view/override/TaskForm.js",
+                "app/view/TaskForm.js"
+            ],
+            "className": "TaskForm"
+        },
+        "3dbb4615-83a6-4cb6-953b-e455913b9c56": {
+            "paths": [
+                "metadata/view/BacklogForm",
+                "app/view/override/BacklogForm.js",
+                "app/view/BacklogForm.js"
+            ],
+            "className": "BacklogForm"
+        },
+        "4d36978e-ba09-4bcc-939c-ba5c7898d2a0": {
+            "paths": [
+                "metadata/view/MyFormPanel3",
+                "app/view/override/MyFormPanel3.js",
+                "app/view/MyFormPanel3.js"
+            ],
+            "className": "MyFormPanel3"
+        },
+        "6fefac46-c190-4d2a-8881-311a3f05a738": {
+            "paths": [
+                "metadata/controller/MegaMind",
+                "app/controller/override/MegaMind.js",
+                "app/controller/MegaMind.js"
+            ],
+            "className": "MegaMind"
+        },
+        "98561f21-067a-4a29-8c39-75232ef1bb4b": {
+            "paths": [
+                "metadata/model/Project",
+                "app/model/override/Project.js",
+                "app/model/Project.js"
+            ],
+            "className": "Project"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "bb3376ff-a54b-422f-b009-04cd9731406e",
+            "8e304491-1305-4f08-b108-1f617a6c0a4f",
+            "3eb1b204-6b21-4aea-8159-de4310bd31c1",
+            "9bc13cf2-731e-4713-89bd-b7bf6c819a55",
+            "3dbb4615-83a6-4cb6-953b-e455913b9c56",
+            "4d36978e-ba09-4bcc-939c-ba5c7898d2a0"
+        ],
+        "store": [],
+        "controller": [
+            "6fefac46-c190-4d2a-8881-311a3f05a738"
+        ],
+        "model": [
+            "98561f21-067a-4a29-8c39-75232ef1bb4b"
+        ],
+        "resource": [
+            "7d00e6bf-c23a-48ff-a6af-d7ffccc3a1f7"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}
