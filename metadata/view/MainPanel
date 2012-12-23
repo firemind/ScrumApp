@@ -236,7 +236,9 @@
                         "iconCls": "",
                         "title": "In Progress",
                         "designer|userClassName": "MyList",
-                        "itemId": "mylist4"
+                        "id": "projectsInProgress",
+                        "itemId": "projectInProgress",
+                        "store": "projectStore"
                     },
                     "designerId": "8f953ae6-cd2d-4058-b9bb-93695c770c7e",
                     "customConfigs": [
@@ -257,7 +259,7 @@
                             "userConfig": {
                                 "designer|userClassName": "itemTpl",
                                 "implHandler": [
-                                    "<div>List Item {string}</div>"
+                                    "<div>{name}</div>"
                                 ],
                                 "designer|displayName": "itemTpl"
                             },
