@@ -84,6 +84,14 @@
                 "app/model/Project.js"
             ],
             "className": "Project"
+        },
+        "f00401c3-26cb-4ce9-ab0b-3681197f5213": {
+            "paths": [
+                "metadata/store/ProjectStore",
+                "app/store/override/ProjectStore.js",
+                "app/store/ProjectStore.js"
+            ],
+            "className": "ProjectStore"
         }
     },
     "viewOrderMap": {
@@ -95,7 +103,9 @@
             "3dbb4615-83a6-4cb6-953b-e455913b9c56",
             "4d36978e-ba09-4bcc-939c-ba5c7898d2a0"
         ],
-        "store": [],
+        "store": [
+            "f00401c3-26cb-4ce9-ab0b-3681197f5213"
+        ],
         "controller": [
             "6fefac46-c190-4d2a-8881-311a3f05a738"
         ],

@@ -1,0 +1,29 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ProjectStore",
+        "model": "Project",
+        "storeId": "projectStore"
+    },
+    "id": "ExtBox1-ext-gen52572",
+    "designerId": "f00401c3-26cb-4ce9-ab0b-3681197f5213",
+    "cn": [
+        {
+            "type": "localstorageproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLocalStorageProxy"
+            },
+            "designerId": "165e12f1-400a-4d45-bf48-bd62627ccf49"
+        }
+    ]
+}

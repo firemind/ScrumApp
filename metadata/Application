@@ -9,6 +9,9 @@
         "models": [
             "Project"
         ],
+        "stores": [
+            "ProjectStore"
+        ],
         "views": [
             "MainPanel",
             "ProjectView",
