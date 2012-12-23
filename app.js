@@ -14,29 +14,43 @@
  */
 
 Ext.Loader.setConfig({
-    enabled: true
+  enabled: true
 });
 
 Ext.application({
-    models: [
-        'Project'
-    ],
-    views: [
-        'MainPanel',
-        'ProjectView',
-        'MyTabPanel1',
-        'TaskForm',
-        'BacklogForm',
-        'MyFormPanel3'
-    ],
-    name: 'ScrumApp',
-    controllers: [
-        'MegaMind'
-    ],
+  stores: [
+  'TaskStore',
+  ],
+  models: [
+  'Project',
+  'Task'
+  ],
+  views: [
+  'MainPanel',
+  'ProjectView',
+  'MyTabPanel1',
+  'TaskForm',
+  'BacklogForm',
+  'MyFormPanel3'
+  ],
+  name: 'ScrumApp',
+  controllers: [
+  'MegaMind'
+  ],
 
-    launch: function() {
+  launch: function() {
+    Ext.onReady(function(){
+      //navigator.splashscreen.hide();
+      s = Ext.getStore("taskSyncStore");
+      s.setSyncRemovedRecords(true); // TODO hacky
+      s.loadLocal(function(){
+        if(s.getCount() == 0){
+          //s.loadServer();
+        }
+      });
+    });
 
-        Ext.create('ScrumApp.view.MainPanel', {fullscreen: true});
-    }
+    Ext.create('ScrumApp.view.MainPanel', {fullscreen: true});
+  }
 
 });
