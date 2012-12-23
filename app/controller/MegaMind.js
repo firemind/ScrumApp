@@ -18,11 +18,13 @@ Ext.define('ScrumApp.controller.MegaMind', {
 
     config: {
         routes: {
-            'projects/:id': 'showProject'
+            'projects/:id': 'showProject',
+            'tasks/:id': 'editTask'
         },
 
         refs: {
-            projectView: '#projectView'
+            projectView: '#projectView',
+            taskForm: '#TaskForm'
         }
     },
 
@@ -36,6 +38,24 @@ Ext.define('ScrumApp.controller.MegaMind', {
         }
 
         Ext.Viewport.setActiveItem(view);
+    },
+
+    editTask: function(id) {
+        view = this.getTaskForm();
+
+        if(view == undefined){
+            view = Ext.Viewport.add({
+                xtype: 'wordform'
+            });
+        }
+        word = Ext.getStore('offlineSyncStore').getById(id);
+        if(word != undefined){
+            view.setRecord(word);
+            Ext.Viewport.setActiveItem(view);
+        }else{
+            Ext.Msg.alert('Could not load Word ' + id);
+        }
+
     }
 
 });

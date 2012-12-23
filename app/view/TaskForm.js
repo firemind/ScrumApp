@@ -17,6 +17,7 @@ Ext.define('ScrumApp.view.TaskForm', {
     extend: 'Ext.form.Panel',
 
     config: {
+        id: 'TaskForm',
         items: [
             {
                 xtype: 'titlebar',
