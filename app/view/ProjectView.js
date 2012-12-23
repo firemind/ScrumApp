@@ -79,8 +79,8 @@ Ext.define('ScrumApp.view.ProjectView', {
             {
                 xtype: 'tabpanel',
                 title: 'Tasks',
-                activeItem: 1,
                 iconCls: 'compose',
+                activeItem: 1,
                 items: [
                     {
                         xtype: 'toolbar',
