@@ -35,20 +35,20 @@ Ext.define('ScrumApp.model.Task', {
             {
                 type: 'presence',
                 field: 'name'
+            },
+            {
+                type: 'presence',
+                field: 'state'
+            },
+            {
+                type: 'exclusion',
+                field: 'state',
+                list: [
+                    'open',
+                    'in_progress',
+                    'closed'
+                ]
             }
-        /*{*/
-        /*type: 'presence',*/
-        /*field: 'state'*/
-        /*},*/
-        /*{*/
-/*type: 'exclusion',*/
-/*field: 'state',*/
-/*list: [*/
-/*'open',*/
-/*'in_progress',*/
-/*'closed'*/
-/*]*/
-/*}*/
         ]
     }
 });

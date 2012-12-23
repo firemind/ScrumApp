@@ -16,40 +16,16 @@
 Ext.define('ScrumApp.view.MainPanel', {
     extend: 'Ext.tab.Panel',
 
+    requires: [
+        'ScrumApp.view.MyTasksPanel'
+    ],
+
     config: {
         items: [
             {
-                xtype: 'tabpanel',
+                xtype: 'mytaskspanel',
                 title: 'My Tasks',
-                activeItem: 1,
-                iconCls: 'organize',
-                items: [
-                    {
-                        xtype: 'list',
-                        id: 'myTasksOpenList',
-                        iconCls: '',
-                        title: 'Open',
-                        store: 'taskSyncStore',
-                        itemTpl: [
-                            '<div>{name}</div>'
-                        ]
-                    },
-                    {
-                        xtype: 'list',
-                        iconCls: '',
-                        title: 'In Progress',
-                        itemTpl: [
-                            '<div>List Item {string}</div>'
-                        ]
-                    },
-                    {
-                        xtype: 'list',
-                        title: 'Completed',
-                        itemTpl: [
-                            '<div>List Item {string}</div>'
-                        ]
-                    }
-                ]
+                iconCls: 'organize'
             },
             {
                 xtype: 'tabpanel',
@@ -83,12 +59,10 @@ Ext.define('ScrumApp.view.MainPanel', {
                         xtype: 'list',
                         iconCls: '',
                         title: 'In Progress',
-                        id: 'projectsInProgress',
-                        itemId: 'projectInProgress',
+                        itemId: 'mylist4',
                         itemTpl: [
-                            '<div>{name}</div>'
-                        ],
-                        store: 'projectStore'
+                            '<div>List Item {string}</div>'
+                        ]
                     },
                     {
                         xtype: 'list',
@@ -139,7 +113,7 @@ Ext.define('ScrumApp.view.MainPanel', {
             {
                 fn: 'onMylist4ItemTap',
                 event: 'itemtap',
-                delegate: '#projectsInProgress'
+                delegate: '#mylist4'
             }
         ]
     },
