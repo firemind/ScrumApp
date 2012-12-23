@@ -45,17 +45,26 @@ Ext.define('ScrumApp.controller.MegaMind', {
 
         if(view == undefined){
             view = Ext.Viewport.add({
-                xtype: 'wordform'
+                xtype: 'taskform'
             });
         }
-        word = Ext.getStore('offlineSyncStore').getById(id);
-        if(word != undefined){
-            view.setRecord(word);
+        task = Ext.getStore('taskSyncStore').getById(id);
+        if(task != undefined){
+            view.setRecord(task);
             Ext.Viewport.setActiveItem(view);
         }else{
-            Ext.Msg.alert('Could not load Word ' + id);
+            Ext.Msg.alert('Could not load Task ' + id);
         }
 
+    },
+    updateTaskRecord: function(record, vals) {
+        s = Ext.getStore('taskSyncStore');
+        record.set('name', vals.name);
+        Ext.blub= record;
+        console.dir(record.get('name'));
+        //record.set('comment', vals.comment);
+        s.sync();
+        history.back();
     }
 
 });

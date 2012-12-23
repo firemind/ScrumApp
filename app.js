@@ -23,19 +23,19 @@ Ext.application({
   'Task'
   ],
   views: [
-  'MainPanel',
-  'ProjectView',
-  'MyTasksPanel',
-  'TaskForm',
-  'BacklogForm',
-  'MyFormPanel3'
+    'MainPanel',
+    'ProjectView',
+    'MyTasksPanel',
+    'TaskForm',
+    'BacklogForm',
+    'MyFormPanel3'
   ],
   stores: [
-  'TaskStore'
+    'TaskStore'
   ],
   name: 'ScrumApp',
   controllers: [
-  'MegaMind'
+    'MegaMind'
   ],
 
   launch: function() {
@@ -49,6 +49,12 @@ Ext.application({
       });
 
     });
+
+    ScrumApp.app.getHistory().on('change', function() {
+        if (!String(window.location.hash).substr(1)) {
+            Ext.Viewport.setActiveItem(0);
+        };
+    }, this);
 
     Ext.create('ScrumApp.view.MainPanel', { fullscreen: true });
   }

@@ -22,10 +22,11 @@ Ext.define('ScrumApp.view.MyTasksPanel', {
             {
                 xtype: 'list',
                 iconCls: '',
+                store: 'taskSyncStore',
                 title: 'Open',
                 itemId: 'mylist',
                 itemTpl: [
-                    '<div>List Item {string}</div>'
+                    '<div>{name}</div>'
                 ]
             },
             {

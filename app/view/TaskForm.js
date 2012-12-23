@@ -15,6 +15,7 @@
 
 Ext.define('ScrumApp.view.TaskForm', {
     extend: 'Ext.form.Panel',
+    alias: 'widget.taskform',
 
     config: {
         id: 'TaskForm',
@@ -27,6 +28,7 @@ Ext.define('ScrumApp.view.TaskForm', {
                     {
                         xtype: 'button',
                         ui: 'back',
+                        itemId: 'backButton',
                         text: 'Back'
                     }
                 ]
@@ -37,29 +39,54 @@ Ext.define('ScrumApp.view.TaskForm', {
                 items: [
                     {
                         xtype: 'textfield',
+                        name: 'name',
                         label: 'Name'
                     },
                     {
                         xtype: 'spinnerfield',
                         label: 'Time',
+                        name: 'estimated_time',
                         stepValue: 0.5
                     },
                     {
                         xtype: 'selectfield',
+                        name: 'state',
                         label: 'State'
                     },
                     {
                         xtype: 'textareafield',
+                        name: 'description',
                         label: 'Description'
                     },
                     {
                         xtype: 'button',
                         ui: 'confirm',
+                        itemId: 'saveButton',
                         text: 'Apply'
                     }
                 ]
             }
+        ],
+        listeners: [
+            {
+                fn: 'onBackButtonRelease',
+                event: 'release',
+                delegate: '#backButton'
+            },
+            {
+                fn: 'onSaveButtonRelease',
+                event: 'release',
+                delegate: '#saveButton'
+            }
         ]
-    }
 
+    },
+    onBackButtonRelease: function(button, e, options) {
+       history.back();
+    },
+    onSaveButtonRelease: function(button, e, options) {
+        r = this.getRecord();
+        vals = this.getValues();
+        ScrumApp.app.getController('MegaMind').updateTaskRecord(r, vals);
+    },
 });
