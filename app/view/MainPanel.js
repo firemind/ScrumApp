@@ -52,7 +52,7 @@ Ext.define('ScrumApp.view.MainPanel', {
                         iconCls: '',
                         title: 'Open',
                         itemTpl: [
-                            '<div>List Item {string}</div>'
+                            '<div>{name}</div>'
                         ]
                     },
                     {
@@ -61,14 +61,15 @@ Ext.define('ScrumApp.view.MainPanel', {
                         title: 'In Progress',
                         itemId: 'mylist4',
                         itemTpl: [
-                            '<div>List Item {string}</div>'
-                        ]
+                            '<div>{name}</div>'
+                        ],
+                        store: 'projectSyncStore'
                     },
                     {
                         xtype: 'list',
                         title: 'Completed',
                         itemTpl: [
-                            '<div>List Item {string}</div>'
+                            '<div>{name}</div>'
                         ]
                     }
                 ]

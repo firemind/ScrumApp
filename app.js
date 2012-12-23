@@ -31,7 +31,8 @@ Ext.application({
   'MyFormPanel3'
   ],
   stores: [
-  'TaskStore'
+  'TaskStore',
+  'ProjectStore'  
   ],
   name: 'ScrumApp',
   controllers: [
@@ -51,7 +52,7 @@ Ext.application({
       projectStore = Ext.getStore('projectSyncStore');
       projectStore.setSyncRemovedRecords(true); // TODO hacky
       projectStore.loadLocal(function(){
-        if(projectStore.getCount()= 0){
+        if(projectStore.getCount()== 0){
           projectStore.loadServer();
         }
       });
