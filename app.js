@@ -28,7 +28,8 @@ Ext.application({
     'MyTasksPanel',
     'TaskForm',
     'BacklogForm',
-    'MyFormPanel3'
+    'EditProjectForm',
+    'NewProjectForm'
   ],
   stores: [
     'TaskStore',

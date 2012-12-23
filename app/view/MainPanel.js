@@ -38,12 +38,18 @@ Ext.define('ScrumApp.view.MainPanel', {
                         docked: 'bottom',
                         items: [
                             {
+                                id: 'addProject',
                                 xtype: 'button',
                                 flex: 1,
                                 ui: 'action',
                                 iconAlign: 'bottom',
                                 iconMask: true,
-                                text: 'Add'
+                                text: 'Add',
+                                listeners: {
+                                    tap: function (){
+                                       ScrumApp.app.redirectTo("projects/new");
+                                    }
+                                }
                             }
                         ]
                     },
@@ -59,7 +65,7 @@ Ext.define('ScrumApp.view.MainPanel', {
                         xtype: 'list',
                         iconCls: '',
                         title: 'In Progress',
-                        itemId: 'mylist4',
+                        itemId: 'projectInProgress',
                         itemTpl: [
                             '<div>{name}</div>'
                         ],
@@ -112,14 +118,14 @@ Ext.define('ScrumApp.view.MainPanel', {
         },
         listeners: [
             {
-                fn: 'onMylist4ItemTap',
+                fn: 'onProjectTap',
                 event: 'itemtap',
-                delegate: '#mylist4'
+                delegate: '#projectInProgress'
             }
         ]
     },
 
-    onMylist4ItemTap: function(dataview, index, target, record, e, options) {
+    onProjectTap: function(dataview, index, target, record, e, options) {
         ScrumApp.app.redirectTo("projects/"+ record.getId());
     }
 

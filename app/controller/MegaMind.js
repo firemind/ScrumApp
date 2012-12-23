@@ -18,14 +18,37 @@ Ext.define('ScrumApp.controller.MegaMind', {
 
     config: {
         routes: {
+            'projects/new': 'newProject',
             'projects/:id': 'showProject',
+            'projects/:id/edit': 'editProject',
             'tasks/:id': 'editTask'
         },
 
         refs: {
+            newProjectForm: '#newProjectForm',
             projectView: '#projectView',
+            editProjectForm: '#editProjectForm',
             taskForm: '#TaskForm'
         }
+    },
+
+    newProject: function() {
+        view= this.getNewProjectForm();
+
+        if (view == undefined) {
+            view = Ext.Viewport.add({
+                xtype: 'newprojectform'
+            });
+        }
+
+        Ext.Viewport.setActiveItem(view);
+    },
+
+    createProject: function(vals) {
+        s = Ext.getStore('projectSyncStore');
+        s.add({name: vals.name, description: vals.description});
+        s.sync();
+        history.back();
     },
 
     showProject: function(id) {
@@ -38,6 +61,33 @@ Ext.define('ScrumApp.controller.MegaMind', {
         }
 
         Ext.Viewport.setActiveItem(view);
+    },
+
+    editProject: function(id){
+
+        view = this.getEditProjectForm();
+
+        if(view == undefined){
+            view = Ext.Viewport.add({
+                xtype: 'editprojectform'
+            });
+        }
+        project = Ext.getStore('projectSyncStore').getById(id);
+        if(project != undefined){
+            view.setRecord(project);
+            Ext.Viewport.setActiveItem(view);
+        }else{
+            Ext.Msg.alert('Could not load Project ' + id);
+        }
+
+    },
+
+    updateProjectRecord: function(record, vals) {
+        s = Ext.getStore('projectSyncStore');
+        record.set('name', vals.name);
+        record.set('description', vals.description);
+        s.sync();
+        history.back();
     },
 
     editTask: function(id) {
