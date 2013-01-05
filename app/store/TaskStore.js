@@ -9,7 +9,10 @@ Ext.define('ScrumApp.store.TaskStore', {
         syncRemovedRecords: true,
         localProxy: {
             type: 'localstorage',
-            id: 'task-offline-store'
+            id: 'task-offline-store',
+            reader: {
+                idProperty: 'id',
+            }
         },
         serverProxy: {
             type: 'rest',

@@ -79,6 +79,24 @@ Ext.define('ScrumApp.view.MyTasksPanel', {
               event: 'activate',
               delegate: '#closedTaskList',
               fn: function(newActiveItem, container, oldActiveItem, eOpt){ var s= Ext.getStore('taskSyncStore'); s.clearFilter();s.filter('state',  'closed');}
+            },
+            {
+              event: 'itemswipe',
+              delegate: '#openTaskList',
+              fn: function( t, index, target, record, e, eOpts ){ if(e.direction == 'right'){ record.set('state', 'in_progress'); t.getStore().sync(); }}
+            },
+            {
+              event: 'itemswipe',
+              delegate: '#inProgressTaskList',
+              fn: function( t, index, target, record, e, eOpts ){ 
+                record.set('state', (e.direction == 'left') ? 'open' : 'closed'); 
+                t.getStore().sync();
+              }
+            },
+            {
+              event: 'itemswipe',
+              delegate: '#closedTaskList',
+              fn: function( t, index, target, record, e, eOpts ){ if(e.direction == 'left'){ record.set('state', 'in_progress'); t.getStore().sync(); }}
             }
         ]
     },
